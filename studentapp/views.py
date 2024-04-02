@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -32,4 +33,4 @@ def logout_user(request):
 
 
 def register_user(request):
-    return render(request, 'register.html', {})
+    return render(request, 'register.html', {'form': form})
